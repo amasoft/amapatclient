@@ -1,0 +1,18 @@
+.writeFormGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+.writeInput{
+    font-size: 30px;
+    border: 1px solid blue;
+    padding: 20px;
+    width: 70vw;
+}
+.writeInput:focus{
+    /* //outline: none; */
+}
+.writeText{
+    font-size: 20px;
+    height: 100vh;
+}
