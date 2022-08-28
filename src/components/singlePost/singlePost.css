@@ -83,3 +83,8 @@ object-fit: cover;
     align-self: flex-end;
     margin-top: 20px;
 }
+.sharepostcontainer{
+    width: 100%;
+    background-color: green;
+    height: 50px;
+}

@@ -7,7 +7,9 @@ import axios from "axios"
 import "./settings.css"
 
 export default function Settings() {
-  const PF = "http://localhost:5000/images/"
+  // const PF = "http://localhost:5000/images/"
+  const PF = "https://amapatapiv2.herokuapp.com/images/"  
+
   const [file,setfile]=useState('')
   const [username,setUsername]=useState('')
   const [email,setEmail]=useState('')

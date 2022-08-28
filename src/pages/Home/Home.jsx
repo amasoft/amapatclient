@@ -12,13 +12,14 @@ export default function Home() {
   const [posts,setPosts]=useState([])
   const [nopost,setNopost]=useState(false)
   const {search}=useLocation();
-      
+      //alert("search"+search)
   useEffect(()=>{
     const fetchPosts=async ()=>{
-      Axios.get("http://localhost:5000/api/posts/"+search).then((data)=>{
-        console.log(data)
+      Axios.get("https://amapatapiv2.herokuapp.com/api/posts/"+search).then((data)=>{
+        // Axios.get("http://localhost:5000/api/posts/"+search).then((data)=>{
+          console.log(data)
        setPosts(data.data)
-   if(data.data==""){
+   if(data.data===""){
     setNopost(true)
 
    }
