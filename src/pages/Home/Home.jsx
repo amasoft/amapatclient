@@ -3,10 +3,11 @@ import { useState } from "react"
 import Header from "../../components/header/Header"
 import Posts from "../../components/posts/Posts"
 import Sidebar from "../../components/sidebar/Sidebar"
+import React, { Component }  from 'react';
+
 import "./home.css"
 import Axios from 'axios'
 import { useLocation } from "react-router-dom"
-import { ConnectionStates } from "mongoose"
 // import axios from 'axios'
 export default function Home() {
   const [posts,setPosts]=useState([])

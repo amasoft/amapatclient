@@ -6,6 +6,8 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 import { useContext } from "react"
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
+import React, { Component }  from 'react';
+
 // import { Editor } from "react-draft-wysiwyg";
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import {Context} from "../../context/Context"

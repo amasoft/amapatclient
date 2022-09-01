@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import{FacebookShareButton,WhatsappShareButton} from "react-share"
-import {FacebookIcon,WhatsappIcon} from "react-share"
+// import{FacebookShareButton,WhatsappShareButton} from "react-share"
+// import {FacebookIcon,WhatsappIcon} from "react-share"
 // import Form from 'react-bootstrap/Form';
 import Form from "react-bootstrap/Form";
 import Comment from "../comments/Comment";
+
 import "./singlePost.css";
 import axios from "axios";
+import React, { Component }  from 'react';
+
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 export default function SinglePost() {
@@ -136,7 +139,7 @@ export default function SinglePost() {
           />
         ) : (
           <h1 className="singlePostTitle">
-            {title}
+            {/* {title}
             {post.username === user?.username && (
               <div className="singlePostEdit">
                 <i
@@ -150,7 +153,7 @@ export default function SinglePost() {
                   onClick={handleDelete}
                 ></i>
               </div>
-            )}
+            )} */}
           </h1>
         )}
         <div className="singlePostInfo">
@@ -181,7 +184,7 @@ export default function SinglePost() {
         )}
         <div className="sharepostcontainer">
           <span>{Nocomment}Comments</span>
-          <FacebookShareButton url="localhost:3001/post/62dd60d80f4fcd50ec25b2c8"
+          {/* <FacebookShareButton url="localhost:3001/post/62dd60d80f4fcd50ec25b2c8"
           quote={title}
           >
 <FacebookIcon logofillcolor='white' round={true}></FacebookIcon>
@@ -192,7 +195,7 @@ export default function SinglePost() {
             >
 
             </WhatsappIcon>
-          </WhatsappShareButton>
+          </WhatsappShareButton> */}
         </div>
       </div>
       {console.log("the comments" + JSON.stringify({ comments }))}
@@ -249,3 +252,13 @@ const display = (message, infor) => {
   console.log("message :" + message + ", data" + JSON.stringify(infor));
   // console.log("message :"+message+", data"+infor)
 };
+
+// import React from 'react'
+
+// export default function SinglePost() {
+//   return (
+//     <div>
+//       <p>sinnnnnn</p>
+//     </div>
+//   )
+// }

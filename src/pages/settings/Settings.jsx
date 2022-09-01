@@ -3,6 +3,7 @@ import { useRef } from "react"
 import Sidebar from "../../components/sidebar/Sidebar"
 import { Context } from "../../context/Context"
 import axios from "axios"
+import React, { Component }  from 'react';
 
 import "./settings.css"
 

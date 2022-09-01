@@ -1,5 +1,7 @@
 import Post from "../post/Post"
 import  "./posts.css"
+import React, { Component }  from 'react';
+
 // react nodejs social media app tutorial-mearn stack app full courser webkitURL/hooks
 export default function Posts({posts}) {
  var arraydata=["name","age","birth"]
