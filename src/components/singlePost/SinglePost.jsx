@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 // import{FacebookShareButton,WhatsappShareButton} from "react-share"
 // import {FacebookIcon,WhatsappIcon} from "react-share"
 // import Form from 'react-bootstrap/Form';
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Comment from "../comments/Comment";
 
 import "./singlePost.css";
