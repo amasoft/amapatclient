@@ -1,11 +1,11 @@
 import { useState } from "react"
 import "./write.css"
 import axios from "axios"
-import {Editor} from "react-draft-wysiwyg"
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
+// import {Editor} from "react-draft-wysiwyg"
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 import { useContext } from "react"
-import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.css'
+// import Dropdown from 'react-dropdown'
+// import 'react-dropdown/style.css'
 import React, { Component }  from 'react';
 
 // import { Editor } from "react-draft-wysiwyg";
@@ -102,13 +102,13 @@ getCategories()
 
         </div>
         <p>rich editor uder</p>
-        <Editor
+        {/* <Editor
   editorState={editorState}
   toolbarClassName="toolbarClassName"
   wrapperClassName="wrapperClassName"
   editorClassName="editorClassName"
   // onEditorStateChange={ this.seteditorState}
-/>;
+/>; */}
 <button className="writeSubmit" type="submit">Publish</button>
 <button className="w" onClick={checktext}>check test</button>
       </form>
