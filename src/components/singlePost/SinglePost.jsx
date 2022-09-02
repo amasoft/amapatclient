@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import Button from "react-bootstrap/Button";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
+// import FloatingLabel from "react-bootstrap/FloatingLabel";
 // import{FacebookShareButton,WhatsappShareButton} from "react-share"
 // import {FacebookIcon,WhatsappIcon} from "react-share"
 // import Form from 'react-bootstrap/Form';
