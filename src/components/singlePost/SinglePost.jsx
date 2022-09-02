@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 // import{FacebookShareButton,WhatsappShareButton} from "react-share"
 // import {FacebookIcon,WhatsappIcon} from "react-share"
@@ -198,7 +198,7 @@ export default function SinglePost() {
           </WhatsappShareButton> */}
         </div>
       </div>
-      {console.log("the comments" + JSON.stringify({ comments }))}
+      {/* {console.log("the comments" + JSON.stringify({ comments }))}
       <Form onSubmit={submitComment}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
@@ -219,20 +219,20 @@ export default function SinglePost() {
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
-        </Form.Group>
+        </Form.Group> */}
 
-        <FloatingLabel controlId="floatingTextarea2" label="">
+        {/* <FloatingLabel controlId="floatingTextarea2" label="">
           <Form.Control
             as="textarea"
             onChange={(e) => setusercomments(e.target.value)}
             placeholder="Leave a comment here"
             style={{ height: "100px" }}
           />
-        </FloatingLabel>
-        <Button variant="primary" type="submit">
+        </FloatingLabel> */}
+        {/* <Button variant="primary" type="submit">
           Submit
-        </Button>
-      </Form>
+        </Button> */}
+      {/* </Form> */}
       
       {comments.map((comment) => {
         return (
