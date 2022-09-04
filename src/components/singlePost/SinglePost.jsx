@@ -60,8 +60,9 @@ export default function SinglePost() {
       comment:usercomments,
       postid:post._id
     }
+
     // const addComments=await axios.post("http://localhost:5000/api/comments/",newcomments)
-    const addComments=await axios.post("https://amatecblog.herokuapp.com/api/comments/",newcomments)
+    const addComments=await axios.post("https://amapatapiv2.herokuapp.com/api/comments/",newcomments)
 
     console.log("added response"+JSON.stringify(addComments))
     alert("comment added " + getemail + " " + usercomments+post._id);
@@ -70,7 +71,7 @@ export default function SinglePost() {
   useEffect(() => {
     const getPost = async () => {
       // const res = await axios.get("http://localhost:5000/api/posts/" + path);
-      const res = await axios.get("https://amatecblog.herokuapp.com/api/posts/" + path);
+      const res = await axios.get("https://amapatapiv2.herokuapp.com/api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
