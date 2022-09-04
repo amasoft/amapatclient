@@ -37,8 +37,9 @@ export default function SinglePost() {
   useEffect(() => {
     const getPostComments = async () => {
       await axios
-        .get("http://localhost:5000/api/comments/", {
-          params: {
+      // .get("http://localhost:5000/api/comments/", {
+        .get("https://amapatapiv2.herokuapp.com/api/comments/", {
+        params: {
             postid: path,
           },
         })
