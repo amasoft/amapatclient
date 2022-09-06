@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import Button from "react-bootstrap/Button";
 // import FloatingLabel from "react-bootstrap/FloatingLabel";
-// import{FacebookShareButton,WhatsappShareButton} from "react-share"
+import{FacebookShareButton,TwitterIcon,TwitterShareButton,FacebookIcon,WhatsappShareButton,WhatsappIcon} from "react-share"
 // import {FacebookIcon,WhatsappIcon} from "react-share"
 // import Form from 'react-bootstrap/Form';
 // import Form from "react-bootstrap/Form";
@@ -20,7 +20,7 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2];
   console.log(path);
   const [post, setPost] = useState({});
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://amapatapiv2.herokuapp.com/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -188,7 +188,21 @@ export default function SinglePost() {
         )}
         <div className="sharepostcontainer">
           <span>{Nocomment}Comments</span>
-          {/* <FacebookShareButton url="localhost:3001/post/62dd60d80f4fcd50ec25b2c8"
+          <FacebookShareButton url="https://amatecblog.herokuapp.com/post/62dd60d80f4fcd50ec25b2c8"
+          quote={title}
+          >
+<FacebookIcon logofillcolor='white' round={true}></FacebookIcon>
+          </FacebookShareButton>
+          <WhatsappShareButton  url="https://amatecblog.herokuapp.com/post/62dd60d80f4fcd50ec25b2c8" title={title}>
+            <WhatsappIcon
+            logofillcolor="white" round={true}
+            >
+
+            </WhatsappIcon>
+          </WhatsappShareButton>
+          {
+          
+          /* <FacebookShareButton url="localhost:3001/post/62dd60d80f4fcd50ec25b2c8"
           quote={title}
           >
 <FacebookIcon logofillcolor='white' round={true}></FacebookIcon>
