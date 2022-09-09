@@ -217,7 +217,7 @@ export default function SinglePost() {
           </WhatsappShareButton> */}
         </div>
       </div>
-      <Form class="container" onSubmit={submitComment}>
+      <Form class="container" onSubmit={submitComment }>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" placeholder="Please enter your name" onChange={(e) => {setName(e.target.value);}}/>
