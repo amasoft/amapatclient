@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import Button from "react-bootstrap/Button";
-// import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import{FacebookShareButton,TwitterIcon,TwitterShareButton,FacebookIcon,WhatsappShareButton,WhatsappIcon} from "react-share"
 // import {FacebookIcon,WhatsappIcon} from "react-share"
 // import Form from 'react-bootstrap/Form';
 // import Form from "react-bootstrap/Form";
 import Comment from "../comments/Comment";
+import "./comment.css";
 
 import "./singlePost.css";
 import axios from "axios";
@@ -18,7 +19,7 @@ export default function SinglePost() {
   const location = useLocation();
   console.log(location);
   const path = location.pathname.split("/")[2];
-  console.log(path);
+  console.log("url "+path);
   const [post, setPost] = useState({});
   const PF = "https://amapatapiv2.herokuapp.com/images/";
   const { user } = useContext(Context);
@@ -216,42 +217,30 @@ export default function SinglePost() {
           </WhatsappShareButton> */}
         </div>
       </div>
-      {/* {console.log("the comments" + JSON.stringify({ comments }))}
-      <Form onSubmit={submitComment}>
+      <Form class="container" onSubmit={submitComment}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter your Name"
-            onChange={(e) => setName(e.target.value)}
-          />
-    
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group> */}
-
-        {/* <FloatingLabel controlId="floatingTextarea2" label="">
-          <Form.Control
-            as="textarea"
-            onChange={(e) => setusercomments(e.target.value)}
-            placeholder="Leave a comment here"
-            style={{ height: "100px" }}
-          />
-        </FloatingLabel> */}
-        {/* <Button variant="primary" type="submit">
-          Submit
-        </Button> */}
-      {/* </Form> */}
-      
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Please enter your name" onChange={(e) => {setName(e.target.value);}}/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Please enter your email" onChange={(e) => {setEmail(e.target.value); }}/>
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+      <Form.Control
+          as="textarea"
+          placeholder="Leave a comment here"
+          style={{ height: '100px' }}
+          onChange={(e) => {
+            setusercomments(e.target.value);
+          }}
+        />
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
       {comments.map((comment) => {
         return (
           <div>

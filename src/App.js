@@ -24,7 +24,9 @@ function App() {
       <TopBar/>
      <Routes>
     <Route path="/" element={<Home/>}/>
-    <Route path="/post/:id" element={<Single/>}/>/
+    <Route path="/post/:id" element={<Single/>}/>
+    //  <Route path="/write" element={<Write/>}/>
+
       {/* <Route path="/login" element={user?<Home/>:<Login/>}/>
     //  <Route path="/register" element={user ?<Home/>:<Register/>}/>
     //  <Route path="/settings" element={user?<Settings/>:<Register/>}/>
