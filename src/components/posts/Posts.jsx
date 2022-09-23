@@ -9,13 +9,13 @@ export default function Posts({posts}) {
  const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
 console.log("Amadi"+posts)
 return (
-    <div className="posts">
-
+    // <div className="posts">
+<>
       {posts.map((p)=>{
          return (   
             <Post post={p} />
        )
        })}
-   </div>
+       </>
   )
 }

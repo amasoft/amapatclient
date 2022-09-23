@@ -26,7 +26,12 @@ export default function Sidebar() {
         <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>  
         <ul className="sidebarList">
-          {cats.map((c)=>{
+         {
+             console.log("bintral" +cats.length)
+         }
+          {
+      
+          cats.map((c,i)=>{
 
                 return(
                   <> 

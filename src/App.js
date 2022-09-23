@@ -8,6 +8,7 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import React, { Component }  from 'react';
 
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,14 +18,17 @@ import {
 import SinglePost from './components/singlePost/SinglePost';
 import { useContext } from 'react';
 import { Context } from './context/Context';
+import Check from './pages/Check';
 function App() {
   // const {user}=useContext(Context);
   return (
     <Router> 
-      <TopBar/>
+      {/* <TopBar/> */}
+      <Check/>
      <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/post/:id" element={<Single/>}/>
+    <Route path="/cat/:id" element={<Single/>}/>
     //  <Route path="/write" element={<Write/>}/>
 
       {/* <Route path="/login" element={user?<Home/>:<Login/>}/>
